@@ -26,8 +26,8 @@ export class HouseController {
   }
 
   @Post()
-  async create(house: CreateHouseDTO): Promise<House> {
-    return await this.service.create(house);
+  async create(@Body() body: CreateHouseDTO) {
+    return await this.service.create(body);
   }
   @Patch(':id')
   async update(

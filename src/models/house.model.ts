@@ -5,54 +5,58 @@ export type HouseDocument = House & Document;
 
 @Schema()
 export class House {
-  @Prop({
-    type: mongoose.Schema.Types.ObjectId,
-  })
+  // @Prop({
+  // type: mongoose.Schema.Types.ObjectId,
+  // })
   _id: string;
 
-  @Prop()
+  @Prop({
+    type: String,
+  })
   name: string;
 
-  @Prop()
+  @Prop({
+    type: String,
+  })
   city: string;
 
-  @Prop()
+  @Prop({ type: Number })
   rating: number;
 
-  @Prop()
+  @Prop({ type: Number })
   lat: number;
 
-  @Prop()
+  @Prop({ type: Number })
   lon: number;
 
-  @Prop()
+  @Prop({ type: String })
   image: string;
 
-  @Prop()
+  @Prop({ tyoe: [String] })
   images: string[];
 
-  @Prop()
+  @Prop({ type: String })
   description: string;
 
-  @Prop()
+  @Prop({ type: String })
   summary: string;
 
-  @Prop()
+  @Prop({ type: [String] })
   feature: string[];
 
-  @Prop()
+  @Prop({ type: String })
   street: string;
 
-  @Prop()
+  @Prop({ type: String })
   room_type: string;
 
-  @Prop()
+  @Prop({ type: Number })
   bathrooms: number;
 
-  @Prop()
+  @Prop({ type: String })
   bedrooms: string;
 
-  @Prop()
+  @Prop({ type: Number })
   price: number;
 }
 

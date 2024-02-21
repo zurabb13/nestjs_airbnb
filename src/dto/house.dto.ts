@@ -1,6 +1,5 @@
 export class CreateHouseDTO {
-  _id: string;
-  name: string;
+  readonly name: string;
   city: string;
   rating: number;
   lat: number;
@@ -13,6 +12,8 @@ export class CreateHouseDTO {
   street: string;
   room_type: string;
   bathrooms: number;
+  bedrooms: number;
+  price: number;
 }
 
 export class UpdateHouseDTO {
@@ -29,4 +30,6 @@ export class UpdateHouseDTO {
   street: string;
   room_type: string;
   bathrooms: number;
+  bedrooms: number;
+  price: number;
 }
